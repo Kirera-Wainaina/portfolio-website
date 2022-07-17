@@ -39,5 +39,7 @@ server.on("stream", (stream, headers) => {
 function createFilePath(filePath) {
     if (filePath == "/") {
         return path.join(__dirname, "/frontend/html/home.html");
+    } else {
+        return path.join(__dirname, filePath)
     }
 }

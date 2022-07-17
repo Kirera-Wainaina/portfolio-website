@@ -1,2 +1,5 @@
 # ignore the mp4 video files
 *.mp4
+
+#localhost certificates
+*.pem

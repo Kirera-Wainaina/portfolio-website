@@ -1,2 +1,14 @@
 const video = document.getElementById("landscape");
-video.addEventListener("play", console.log("Video has started playing"));   
+window.addEventListener("load", () => {
+    setInterval(replaceHeader, 10000);
+});
+
+function replaceHeader() {
+    // one header to be displayed at time
+    console.log("called")
+    const welcomeTag = document.querySelector("#welcome-container h1");
+    const nameTag = document.querySelector("#welcome-container p");
+
+    welcomeTag.classList.toggle("show-element");
+    nameTag.classList.toggle("show-element");
+}

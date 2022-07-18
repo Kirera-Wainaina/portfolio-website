@@ -17,6 +17,10 @@ server.on("stream", (stream, headers) => {
     console.log(`${new Date()}, path: ${headers[":path"]}`)
     console.log(headers);
     const filePath = createFilePath(headers[":path"]);
+
+    function onError(error) {
+        handleStreamError(error, stream);
+    }
     
     stream.respondWithFile(
         filePath, 
@@ -24,8 +28,8 @@ server.on("stream", (stream, headers) => {
         { onError });
 })
 
-function onError(error) {
-    // Handle error event when responding to file
+function handleStreamError(error, stream) {
+    // Handle error event when responding with file
     try {
         if (error.code == "ENOENT") {
             stream.respond({ ":status": 404 });

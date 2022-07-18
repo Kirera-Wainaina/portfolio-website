@@ -29,6 +29,12 @@ video#portrait {
 
 #welcome-container h1 {
     font-size: 15em;
+    display: none;
+}
+
+#welcome-container p {
+    font-size: 5em;
+    text-align: center;
 }
 
 @media (orientation: portrait) {

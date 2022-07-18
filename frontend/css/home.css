@@ -5,7 +5,6 @@
 
 h1, p {
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 20vh;
 }
 video {
     width: 99vw;   
@@ -29,7 +28,7 @@ video#portrait {
 }
 
 #welcome-container h1 {
-
+    font-size: 15em;
 }
 
 @media (orientation: portrait) {
@@ -38,6 +37,9 @@ video#portrait {
     }
     video#portrait {
         display: block;
+    }
+    #welcome-container h1 {
+        font-size: 10em;
     }
 
 }

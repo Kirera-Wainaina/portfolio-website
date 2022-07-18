@@ -2,6 +2,8 @@ const http2 = require("http2");
 const fs = require("fs");
 const path = require("path");
 
+const utils = require("./utils/MIMETypes")
+
 const port = 443;
 
 const server = http2.createSecureServer({
@@ -17,6 +19,7 @@ server.on("stream", (stream, headers) => {
     console.log(`${new Date()}, path: ${headers[":path"]}`)
     console.log(headers);
     const filePath = createFilePath(headers[":path"]);
+    const mimetype = utils.findMIMETypeFromExtension(path.extname(filePath));
 
     function onError(error) {
         handleStreamError(error, stream);
@@ -24,7 +27,7 @@ server.on("stream", (stream, headers) => {
     
     stream.respondWithFile(
         filePath, 
-        { "status": 200 }, 
+        { "status": 200, "content-type": mimetype }, 
         { onError });
 })
 

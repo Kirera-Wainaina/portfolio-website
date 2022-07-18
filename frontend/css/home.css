@@ -12,6 +12,21 @@ video#portrait {
     display: none;
 }
 
+#welcome-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-container h1 {
+
+}
+
 @media (orientation: portrait) {
     video#landscape {
         display: none;

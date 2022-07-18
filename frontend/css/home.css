@@ -7,7 +7,7 @@ h1, p {
     font-family: 'Nanum Myeongjo', serif;
 }
 video {
-    width: 99vw;   
+    width: 100vw;   
 }
 video#landscape {
     display: block;
@@ -39,7 +39,7 @@ video#portrait {
         display: block;
     }
     #welcome-container h1 {
-        font-size: 10em;
+        font-size: 5em;
     }
 
 }

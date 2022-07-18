@@ -12,7 +12,7 @@ const server = http2.createSecureServer({
 server.listen(port, console.log(`Listening on port ${port}`))
 
 server.on("stream", (stream, headers) => {
-    console.log(`{new Date()}, path: ${stream[":path"]}`)
+    console.log(`${new Date()}, path: ${headers[":path"]}`)
     console.log(headers);
     const filePath = createFilePath(headers[":path"]);
     // stream.respond({ ":status": 200});

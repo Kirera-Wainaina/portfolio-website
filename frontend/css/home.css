@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 * {
     margin: 0;
 }
 
+h1, p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 20vh;
+}
 video {
     width: 99vw;   
 }

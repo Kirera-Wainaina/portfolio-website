@@ -1,6 +1,6 @@
 const video = document.getElementById("landscape");
 window.addEventListener("load", () => {
-    setInterval(replaceHeader, 10000);
+    setInterval(replaceHeader, 7850);
 });
 
 function replaceHeader() {

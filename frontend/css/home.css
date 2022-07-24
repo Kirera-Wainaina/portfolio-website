@@ -75,6 +75,14 @@ p {
     grid-column: 4 / 10;
 }
 
+.project-card {
+    grid-column: 2 / 11;
+    border: 1px solid lightgrey;
+}
+.project-card img {
+    width: 30vw;
+}
+
 @media (orientation: portrait) {
     body {
         grid-template-columns: repeat(6,1fr);
@@ -103,5 +111,8 @@ p {
         grid-column: 1 / 6;
         margin: 0.5em;
         margin-top: 0;
+    }
+    #project-card {
+        grid-column: 1 / 6;
     }
 }

@@ -24,6 +24,8 @@ server.on("stream", (stream, headers) => {
     function onError(error) {
         handleStreamError(error, stream);
     }
+
+    stream.on("error", error => handleStreamError(error))
     
     stream.respondWithFile(
         filePath, 
@@ -32,6 +34,10 @@ server.on("stream", (stream, headers) => {
 })
 
 function handleStreamError(error, stream) {
+    if (!stream) {
+        console.log(error.code);
+        return ;
+    }
     // Handle error event when responding with file
     try {
         if (error.code == "ENOENT") {

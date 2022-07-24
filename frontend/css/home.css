@@ -3,11 +3,16 @@
     margin: 0;
 }
 
-h1, p {
+h1, h2, p {
     font-family: 'Nanum Myeongjo', serif;
 }
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
 video {
-    width: 100vw;   
+    width: 100vw;  
+    grid-column: 1 / 13; 
 }
 video#landscape {
     display: block;
@@ -35,11 +40,21 @@ video#portrait {
 #welcome-container p {
     font-size: 5em;
     text-align: center;
-    display: none;
+    display: none;  
 }
 
 #welcome-container .show-element{
     display: block;
+}
+#pic-of-me {
+    grid-column: 4 / 10;
+    width: 50vw;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
 }
 
 @media (orientation: portrait) {

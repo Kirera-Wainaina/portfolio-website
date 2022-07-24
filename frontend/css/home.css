@@ -49,8 +49,10 @@ video#portrait {
 #pic-of-me {
     grid-column: 4 / 10;
     width: 50vw;
-    margin-top: 2em;
-    box-shadow: 0px 0px 5px lightgrey;
+    padding: 1em;
+    margin-top: 4em;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 0px 10px 5px #f1f1f1;
 }
 
 h2 {

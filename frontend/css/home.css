@@ -63,6 +63,12 @@ h2 {
 }
 
 @media (orientation: portrait) {
+    body {
+        grid-template-columns: repeat(6,1fr);
+    }
+    video {
+        grid-column: 1 / 6;
+    }
     video#landscape {
         display: none;
     }
@@ -72,5 +78,8 @@ h2 {
     #welcome-container h1 {
         font-size: 5em;
     }
-
+    #pic-of-me {
+        grid-column: 1 / 6;
+        width: 90vw;
+    }
 }

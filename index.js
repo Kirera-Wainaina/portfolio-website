@@ -33,6 +33,10 @@ server.on("stream", (stream, headers) => {
         { onError });
 })
 
+server.on("error", error => {
+    handleStreamError(error);
+})
+
 function handleStreamError(error, stream) {
     if (!stream) {
         console.log(error.code);

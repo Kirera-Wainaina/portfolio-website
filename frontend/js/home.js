@@ -1,14 +1,17 @@
-const video = document.getElementById("landscape");
-window.addEventListener("load", () => {
-    setInterval(replaceHeader, 7850);
-});
+const landscapeVideo = document.getElementById("landscape");
+const portraitVideo = document.getElementById("portrait")
 
-function replaceHeader() {
-    // one header to be displayed at time
-    console.log("called")
+landscapeVideo.addEventListener("ended", event => toggleVideoTags(event))
+portraitVideo.addEventListener("ended", event => toggleVideoTags(event))
+
+
+function toggleVideoTags(event) {
+    //restart the play
+    event.target.play();
+
     const welcomeTag = document.querySelector("#welcome-container h1");
     const nameTag = document.querySelector("#welcome-container p");
-
+    
     welcomeTag.classList.toggle("show-element");
     nameTag.classList.toggle("show-element");
 }

@@ -50,15 +50,40 @@ video#portrait {
 #welcome-container .show-element{
     display: block;
 }
-#pic-of-me {
+#my-pic-container {
     grid-column: 4 / 10;
-    width: 50vw;
-    padding: 1em;
+    border: 1px solid grey;
     margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    rotate: 45deg;
+    background-color: blueviolet;
+    z-index: -1;
+}
+/* #my-pic-container::before { */
+    /* background-color:blueviolet; */
+    /* height: 90vh; */
+    /* content: " "; */
+    /* background-color: aqua; */
+    /* z-index: 1; */
+/* } */
+#pic-of-me {
+    /* grid-column: 4 / 10; */
+    width: 50vw;
+    /* padding: 1em; */
+    /* margin-top: 4em; */
     /* border: 1px solid lightgrey; */
     /* box-shadow: 0px 0px 10px 5px #f1f1f1; */
     /* box-shadow: var(--grey-shadow); */
-    /* border-radius: 5px; */
+    border-radius: 5%;
+    rotate: -45deg;
+}
+#pic-of-me::before {
+    height: inherit;
+    width: inherit;
+    background-color: black;
+    content: "writing on the wall";
 }
 
 h2 {

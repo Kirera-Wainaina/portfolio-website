@@ -9,10 +9,12 @@
 
 h1, h2, h3, p {
     font-family: 'Nanum Myeongjo', serif;
+    color: white;
 }
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background-color: black;
 }
 video {
     width: 100vw;  
@@ -39,12 +41,14 @@ video#portrait {
 #welcome-container h1 {
     font-size: 15em;
     display: none;
+    color: black;
 }
 
 #welcome-container p {
     font-size: 5em;
     text-align: center;
     display: none;  
+    color: black;
 }
 
 #welcome-container .show-element{

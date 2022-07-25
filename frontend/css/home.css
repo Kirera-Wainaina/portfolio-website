@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 :root {
     --grey-shadow: 0px 0px 10px 5px #f1f1f1;
@@ -8,13 +8,11 @@
 }
 
 h1, h2, h3, p {
-    font-family: 'Nanum Myeongjo', serif;
-    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: black;
 }
 video {
     width: 100vw;  
@@ -41,14 +39,12 @@ video#portrait {
 #welcome-container h1 {
     font-size: 15em;
     display: none;
-    color: black;
 }
 
 #welcome-container p {
     font-size: 5em;
     text-align: center;
     display: none;  
-    color: black;
 }
 
 #welcome-container .show-element{
@@ -59,9 +55,10 @@ video#portrait {
     width: 50vw;
     padding: 1em;
     margin-top: 4em;
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
     /* box-shadow: 0px 0px 10px 5px #f1f1f1; */
-    box-shadow: var(--grey-shadow);
+    /* box-shadow: var(--grey-shadow); */
+    /* border-radius: 5px; */
 }
 
 h2 {
@@ -89,11 +86,14 @@ p {
     /* border: 1px solid lightgrey; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    box-shadow: var(--grey-shadow);
+    /* box-shadow: var(--grey-shadow); */
+    background-color: white;
+    border-radius: 5%;
 }
 .project-card h3 {
     text-align: center;
     grid-column: 1 / 4;
+    color: black;
 }
 .project-card img {
     width: 30vw;
@@ -104,6 +104,7 @@ p {
 .project-card p {
     grid-column: 2 / 4;
     padding: 1em;
+    color: black;
 }
 
 @media (orientation: portrait) {
@@ -135,7 +136,16 @@ p {
         margin: 0.5em;
         margin-top: 0;
     }
-    #project-card {
+    .project-card {
         grid-column: 1 / 6;
+        margin: 1em;
+    }
+
+    .project-card img {
+        grid-column: 1 / 4;
+        width: 90%;
+    }
+    .project-card p {
+        grid-column: 1 / 4;
     }
 }

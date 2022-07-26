@@ -1,5 +1,3 @@
-// const landscapeVideo = document.getElementById("landscape");
-// const portraitVideo = document.getElementById("portrait")
 
 // // landscapeVideo.addEventListener("canplaythrough", () => landscapeVideo.play(), { once: true})
 // landscapeVideo.addEventListener("ended", event => toggleVideoTags(event))
@@ -16,13 +14,16 @@
 //     welcomeTag.classList.toggle("show-element");
 //     nameTag.classList.toggle("show-element");
 // }
-
+var landscapeVideo, portraitVideo;
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Event ran")
-    const video = createVideoElement();
-    const body = document.querySelector("body");
-    body.appendChild(video);
-    // video.addEventListener("")
+    landscapeVideo = document.getElementById("landscape");
+    portraitVideo = document.getElementById("portrait")
+
+    if (isLandscape()) {
+        landscapeVideo.src = "/smoke-vid-landscape.mp4"
+    } else {
+        portraitVideo.src = "/smoke-vid-portrait.mp4"
+    }
 })
 
 function createVideoElement() {

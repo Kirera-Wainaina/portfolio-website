@@ -1,3 +1,5 @@
+const bottomBorderAnimation = "8s 4s infinite ease-out clicked-line";
+
 document.addEventListener("DOMContentLoaded", () => {
     // Handle the playback of the video
     const landscapeVideo = document.getElementById("landscape");
@@ -39,7 +41,7 @@ function startAnimation() {
     aElements.forEach(aElement => {
         aElement.style.animation = "8s 4s infinite ease-out blinker"
         if (aElement.classList.contains("clicked")) {
-            aElement.style.animation = "8s 4s infinite ease-out clicked-line"
+            aElement.style.animation = bottomBorderAnimation;
         }
     })
 }
@@ -50,7 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
     aElements.forEach(aElement => {
         aElement.addEventListener("click", event => {
             event.preventDefault();
+            changeBottomBorder(event);
             console.log("clicked")
         })
     })    
 })
+
+function changeBottomBorder(event) {
+    // Remove bottom border from current element
+    var clickedElement = document.getElementsByClassName("clicked");
+    clickedElement = Array.from(clickedElement);
+    clickedElement[0].classList.toggle("clicked");
+
+    //Add bottom border to clicked element
+    event.target.classList.add("clicked");
+    event.target.style.animation = bottomBorderAnimation;
+}

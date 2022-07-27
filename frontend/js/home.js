@@ -64,7 +64,8 @@ function changeBottomBorder(event) {
     clickedElement = Array.from(clickedElement);
     clickedElement[0].classList.toggle("clicked");
 
-    //Add bottom border to clicked element
+    // Add bottom border to clicked element
+    // No need for animating the bottom border as it is handled
+    // by startAnimation()
     event.target.classList.add("clicked");
-    event.target.style.animation = bottomBorderAnimation;
 }

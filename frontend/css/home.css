@@ -34,12 +34,13 @@ video#portrait {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    color: black;
 }
 
 #about-container, #projects-container {
-    opacity: 0.4;
-    background-color: whitesmoke;
+    opacity: 0.6;
+    background-color: black;
+    color: white;
+    /* height: 90vh; */
 }
 
 #about-container.displayed, 
@@ -49,6 +50,8 @@ video#portrait {
 }
 
 #welcome-container {
+    color: black;
+    /* height: 100vh; */
 }
 
 #welcome-container h1 {
@@ -66,19 +69,17 @@ video#portrait {
     display: block;
 }
 
-h2 {
-    grid-column: 1 / 13;
-    text-align: center;
-    margin-top: 1em;
-    font-size: 2em;
+#about-container {
+    flex-direction: column;
+    padding-top: 5vh;
+    /* padding: 3em; */
 }
 
-h3 {
-    grid-column: 4 / 10;
-    font-size: 1.75em;
-    margin: 0.5em;
+#about-container p {
+    margin: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
-
 p {
     font-size: 1.2em;
 }
@@ -166,30 +167,10 @@ p {
     #welcome-container h1 {
         font-size: 5em;
     }
-    #pic-of-me {
-        grid-column: 1 / 6;
-        width: 90vw;
-    }
-    h3 {
-        grid-column: 1 / 6;
-        margin-top: 1em;
-    }
     #about-text {
         grid-column: 1 / 6;
         margin: 0.5em;
         margin-top: 0;
-    }
-    .project-card {
-        grid-column: 1 / 6;
-        margin: 1em;
-    }
-
-    .project-card img {
-        grid-column: 1 / 4;
-        width: 90%;
-    }
-    .project-card p {
-        grid-column: 1 / 4;
     }
     #menu {
         /* border: 1px solid orange; */

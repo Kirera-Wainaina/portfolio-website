@@ -132,10 +132,6 @@ p {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-
-    animation: 8s 12s infinite ease-out blinker;
-    -webkit-animation: 8s 12s infinite ease-out blinker;
-
 }
 
 @keyframes blinker {

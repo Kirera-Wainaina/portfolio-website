@@ -18,15 +18,22 @@
   <body>
     <video id="landscape" autoplay muted></video>
     <video id="portrait" autoplay muted></video>
-    <div id="welcome-container">
+    <div id="menu">
+      <a href="" id="home" class="clicked">Home</a>
+      <a href="" id="projects">Projects</a>
+      <a href="" id="about">About</a>
+    </div>
+    <div data-menu-id="home" id="welcome-container" class="displayed">
       <h1 class="show-element">Welcome</h1>
       <p>I am Kirera Wainaina</p>
     </div>
-    <div id="menu">
-      <a href="" class="clicked">Home</a>
-      <a href="">Projects</a>
-      <a href="">About</a>
+    <div data-menu-id="about" id="about-container">
+      <p>This is the about page</p>
     </div>
+    <div data-menu-id="projects" id="projects-container">
+      <p>This is the projects page</p>
+    </div>
+
   </body>
   
 </html>

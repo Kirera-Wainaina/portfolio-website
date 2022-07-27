@@ -78,6 +78,7 @@ p {
     justify-content: space-around;
     align-items: center;
     gap: 0.2em;
+    z-index: 2;
 }
 #menu a {
     color: black;
@@ -132,6 +133,12 @@ p {
         border-bottom-color: black;
         color: black;
     }
+}
+#about-container {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 
 @media (orientation: portrait) {

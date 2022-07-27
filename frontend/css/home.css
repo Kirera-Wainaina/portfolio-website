@@ -124,15 +124,14 @@ p {
     align-items: center;
     gap: 0.2em;
 }
-#menu p {
+#menu a {
     color: black;
     width: 6em;
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: none;
-    border-top: none;
+    text-decoration: none;
 
     animation: 10s 5s infinite ease-out blinker;
     -webkit-animation: 10s 5s infinite ease-out blinker;

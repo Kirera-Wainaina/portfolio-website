@@ -133,8 +133,8 @@ p {
     align-items: center;
     text-decoration: none;
 
-    animation: 10s 5s infinite ease-out blinker;
-    -webkit-animation: 10s 5s infinite ease-out blinker;
+    animation: 8s 12s infinite ease-out blinker;
+    -webkit-animation: 8s 12s infinite ease-out blinker;
 
 }
 
@@ -196,5 +196,13 @@ p {
     }
     .project-card p {
         grid-column: 1 / 4;
+    }
+    #menu {
+        /* border: 1px solid orange; */
+        width: 90vw;
+        left: 5vw;
+    }
+    #menu a {
+        /* border: 1px solid blue; */
     }
 }

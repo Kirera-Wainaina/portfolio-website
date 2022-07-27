@@ -125,9 +125,7 @@ p {
     gap: 0.2em;
 }
 #menu p {
-    border: 1px solid orangered;
-    color: orangered;
-    /* padding: 1.5em; */
+    color: black;
     width: 6em;
     height: 4em;
     display: flex;
@@ -135,6 +133,28 @@ p {
     align-items: center;
     border-left: none;
     border-top: none;
+
+    animation: 10s 5s infinite ease-out blinker;
+    -webkit-animation: 10s 5s infinite ease-out blinker;
+
+}
+
+@keyframes blinker {
+    0% {
+        color: black;
+    }
+    40% {
+        color: rgba(255, 255, 255, 0.884);
+    }
+    60% {
+        color: rgba(255, 255, 255, 0.637);
+    }
+    80% {
+        color: rgba(255, 255, 255, 0.377);
+    }
+    100% {
+        color: black;
+    }
 }
 
 @media (orientation: portrait) {

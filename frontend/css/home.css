@@ -50,22 +50,6 @@ video#portrait {
 #welcome-container .show-element{
     display: block;
 }
-#my-pic-container {
-    grid-column: 4 / 10;
-    border: 1px solid grey;
-    margin-top: 4em;
-    display: flex;
-    justify-content: center;
-    border-radius: 5%;
-    rotate: 45deg;
-    background-color: blueviolet;
-    z-index: -1;
-}
-#pic-of-me {
-    width: 50vw;
-    border-radius: 5%;
-    rotate: -45deg;
-}
 
 h2 {
     grid-column: 1 / 13;
@@ -82,35 +66,6 @@ h3 {
 
 p {
     font-size: 1.2em;
-}
-#about-text {
-    grid-column: 4 / 10;
-}
-
-.project-card {
-    grid-column: 3 / 11;
-    /* border: 1px solid lightgrey; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* box-shadow: var(--grey-shadow); */
-    background-color: white;
-    border-radius: 5%;
-}
-.project-card h3 {
-    text-align: center;
-    grid-column: 1 / 4;
-    color: black;
-}
-.project-card img {
-    width: 30vw;
-    border: 1px solid lightgray;
-    grid-column: 1 / 2;
-    margin: 1em;
-}
-.project-card p {
-    grid-column: 2 / 4;
-    padding: 1em;
-    color: black;
 }
 #menu {
     position: absolute;

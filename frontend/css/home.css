@@ -134,11 +134,16 @@ p {
         color: black;
     }
 }
-#about-container {
+#about-container, #projects-container {
     display: none;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    background-color: white;
+}
+
+#about-container.displayed, #projects-container.displayed {
+    display: flex;
 }
 
 @media (orientation: portrait) {

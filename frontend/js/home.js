@@ -48,10 +48,8 @@ function startAnimation() {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Handle a elements
-    console.log("dom loaded")
     const aElements = document.querySelectorAll("#menu a");
     aElements.forEach(aElement => {
-        console.log("parsed a elements")
         aElement.addEventListener("click", event => {
             event.preventDefault();
             changeBottomBorder(event);
@@ -75,7 +73,8 @@ function changeBottomBorder(event) {
 function changeContainer(event) {
     const incomingContainer = document.querySelector(`div[data-menu-id=${event.target.id}]`)
     const outgoingContainer = document.getElementsByClassName("displayed")[0];
-    outgoingContainer.style.display = "none";
-    incomingContainer.style.display = "block";
-    console.log("called")
+    // remove the existing container
+    outgoingContainer.classList.toggle("displayed");
+    // enter the outgoing container
+    incomingContainer.classList.toggle("displayed")
 }

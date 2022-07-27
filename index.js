@@ -38,6 +38,7 @@ server.on("error", error => {
 })
 
 function handleStreamError(error, stream) {
+    console.log("This error was caught")
     if (!stream) {
         console.log(error.code);
         return ;

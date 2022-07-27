@@ -25,15 +25,30 @@ video#portrait {
     display: none;
 }
 
-#welcome-container {
+#about-container, #projects-container, #welcome-container {
+    display: none;
     position: absolute;
     top: 0;
-    left: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+}
+
+#about-container, #projects-container {
+    opacity: 0.4;
+    background-color: whitesmoke;
+}
+
+#about-container.displayed, 
+#projects-container.displayed,
+#welcome-container.displayed {
+    display: flex;
+}
+
+#welcome-container {
 }
 
 #welcome-container h1 {
@@ -133,17 +148,6 @@ p {
         border-bottom-color: black;
         color: black;
     }
-}
-#about-container, #projects-container {
-    display: none;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-}
-
-#about-container.displayed, #projects-container.displayed {
-    display: flex;
 }
 
 @media (orientation: portrait) {

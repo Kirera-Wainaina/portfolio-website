@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Handle the playback of the video
     const landscapeVideo = document.getElementById("landscape");
     const portraitVideo = document.getElementById("portrait")
 
@@ -37,3 +38,14 @@ function startAnimation() {
     const aElements = document.querySelectorAll("#menu a")
     aElements.forEach(aElement => aElement.style.animation = "8s 4s infinite ease-out blinker")
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Handle a elements
+    const aElements = document.querySelectorAll("#menu a");
+    aElements.forEach(aElement => {
+        aElement.addEventListener("click", event => {
+            event.preventDefault();
+            console.log("clicked")
+        })
+    })    
+})

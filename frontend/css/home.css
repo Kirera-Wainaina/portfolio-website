@@ -133,6 +133,10 @@ p {
     align-items: center;
     text-decoration: none;
 }
+#menu .clicked{
+    border-bottom: 1px solid;
+    /* animation: 8s 4s infinite ease-out clicked-line; */
+}
 
 @keyframes blinker {
     0% {
@@ -148,6 +152,29 @@ p {
         color: rgba(255, 255, 255, 0.377);
     }
     100% {
+        color: black;
+    }
+}
+
+@keyframes clicked-line {
+    0% {
+        border-bottom-color: black;
+        color: black;
+    }
+    40% {
+        border-bottom-color: rgba(255, 255, 255, 0.884);
+        color: rgba(255, 255, 255, 0.884);
+    }
+    60% {
+        border-bottom-color: rgba(255, 255, 255, 0.637);
+        color: rgba(255, 255, 255, 0.637);
+    }
+    80% {
+        border-bottom-color: rgba(255, 255, 255, 0.377);
+        color: rgba(255, 255, 255, 0.377);
+    }
+    100% {
+        border-bottom-color: black;
         color: black;
     }
 }

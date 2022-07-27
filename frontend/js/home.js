@@ -36,7 +36,12 @@ function toggleVideoTags(event) {
 
 function startAnimation() {
     const aElements = document.querySelectorAll("#menu a")
-    aElements.forEach(aElement => aElement.style.animation = "8s 4s infinite ease-out blinker")
+    aElements.forEach(aElement => {
+        aElement.style.animation = "8s 4s infinite ease-out blinker"
+        if (aElement.classList.contains("clicked")) {
+            aElement.style.animation = "8s 4s infinite ease-out clicked-line"
+        }
+    })
 }
 
 document.addEventListener("DOMContentLoaded", () => {

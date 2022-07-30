@@ -1,5 +1,3 @@
-// const bottomBorderAnimation = "8s 4s infinite ease-out clicked-line";
-
 document.addEventListener("DOMContentLoaded", () => {
     // Handle the playback of the video
     const landscapeVideo = document.getElementById("landscape");
@@ -7,11 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     landscapeVideo.addEventListener("ended", event => {
         toggleVideoTags(event)
-        // startAnimation()
     })
     portraitVideo.addEventListener("ended", event => {
         toggleVideoTags(event);
-        // startAnimation();
     })
 
     if (isLandscape()) {
@@ -36,17 +32,6 @@ function toggleVideoTags(event) {
     nameTag.classList.toggle("show-element");
 }
 
-function startAnimation() {
-    const aElements = document.querySelectorAll("#menu a")
-    aElements.forEach(aElement => {
-        aElement.style.animation = "none";
-        aElement.style.animation = "8s 4s infinite ease-out blinker"
-        if (aElement.classList.contains("clicked")) {
-            aElement.style.animation = bottomBorderAnimation;
-        }
-    })
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     // Handle a elements
     const aElements = document.querySelectorAll("#menu a");
@@ -55,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
             changeBottomBorder(event);
             changeContainer(event);
-            // startAnimation();
         })  
     })
 

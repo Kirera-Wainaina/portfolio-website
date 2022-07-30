@@ -131,7 +131,6 @@ p {
     left: 35vw;
     height: 10vh;
     width: 30vw;
-    /* background-color: orange; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -139,7 +138,6 @@ p {
     z-index: 2;
 }
 #menu a {
-    /* color: black; */
     color: rgba(255, 255, 255, 0.884);
     width: 6em;
     height: 4em;
@@ -150,48 +148,6 @@ p {
 }
 #menu .clicked{
     border-bottom: 1px solid ;
-    /* animation: 8s 4s infinite ease-out clicked-line; */
-}
-
-@keyframes blinker {
-    0% {
-        color: black;
-    }
-    40% {
-        color: rgba(255, 255, 255, 0.884);
-    }
-    60% {
-        color: rgba(255, 255, 255, 0.637);
-    }
-    80% {
-        color: rgba(255, 255, 255, 0.377);
-    }
-    100% {
-        color: black;
-    }
-}
-
-@keyframes clicked-line {
-    0% {
-        border-bottom-color: black;
-        color: black;
-    }
-    40% {
-        border-bottom-color: rgba(255, 255, 255, 0.884);
-        color: rgba(255, 255, 255, 0.884);
-    }
-    60% {
-        border-bottom-color: rgba(255, 255, 255, 0.637);
-        color: rgba(255, 255, 255, 0.637);
-    }
-    80% {
-        border-bottom-color: rgba(255, 255, 255, 0.377);
-        color: rgba(255, 255, 255, 0.377);
-    }
-    100% {
-        border-bottom-color: black;
-        color: black;
-    }
 }
 
 @media (orientation: portrait) {

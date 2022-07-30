@@ -96,8 +96,23 @@ video#portrait {
     width: 30vw;
     
 }
-.project img {
+.project > img {
     width: 30vw;
+}
+
+.content-title {
+    background-color: white;
+    height: 2em;
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    align-items: center;
+}
+.content-title img {
+    height: 2em;
+}
+
+.project-title {
 }
 
 p {

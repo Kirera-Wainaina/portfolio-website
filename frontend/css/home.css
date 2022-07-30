@@ -111,6 +111,11 @@ video#portrait {
 .content-title img {
     height: 2em;
 }
+.content p {
+    margin: 0.5em;
+    background-color: white;
+    color: black;
+}
 
 .project-title {
 }

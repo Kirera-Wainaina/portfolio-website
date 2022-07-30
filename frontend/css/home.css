@@ -83,10 +83,14 @@ video#portrait {
 
 #projects-container {
     flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 12vh;
 }
 
 #project-listings {
     width: 80vw;
+    display: flex;
+    justify-content: space-around;
 }
 .project {
     width: 30vw;

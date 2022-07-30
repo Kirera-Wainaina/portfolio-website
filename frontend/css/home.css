@@ -99,7 +99,7 @@ video#portrait {
     align-items: center;
 }
 .project > img {
-    width: 30vw;
+    width: inherit;
 }
 
 .content-title {
@@ -219,7 +219,13 @@ p {
         width: 90vw;
         left: 5vw;
     }
-    #menu a {
-        /* border: 1px solid blue; */
+    #project-listings {
+        width: 99vw;
+        justify-content: flex-start;
+        gap: .2em;
+        overflow-x: scroll;
+    }
+    .project {
+        width: 90vw;
     }
 }

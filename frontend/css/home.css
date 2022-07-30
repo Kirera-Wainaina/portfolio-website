@@ -139,7 +139,8 @@ p {
     z-index: 2;
 }
 #menu a {
-    color: black;
+    /* color: black; */
+    color: rgba(255, 255, 255, 0.884);
     width: 6em;
     height: 4em;
     display: flex;
@@ -148,7 +149,7 @@ p {
     text-decoration: none;
 }
 #menu .clicked{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid ;
     /* animation: 8s 4s infinite ease-out clicked-line; */
 }
 

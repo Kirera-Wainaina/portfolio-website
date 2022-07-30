@@ -1,4 +1,4 @@
-const bottomBorderAnimation = "8s 4s infinite ease-out clicked-line";
+// const bottomBorderAnimation = "8s 4s infinite ease-out clicked-line";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Handle the playback of the video
@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     landscapeVideo.addEventListener("ended", event => {
         toggleVideoTags(event)
-        startAnimation()
+        // startAnimation()
     })
     portraitVideo.addEventListener("ended", event => {
         toggleVideoTags(event);
-        startAnimation();
+        // startAnimation();
     })
 
     if (isLandscape()) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
             changeBottomBorder(event);
             changeContainer(event);
-            startAnimation();
+            // startAnimation();
         })  
     })
 
@@ -74,6 +74,7 @@ function changeBottomBorder(event) {
 }
 
 function changeContainer(event) {
+    // Change the information being showed
     const incomingContainer = document.querySelector(`div[data-menu-id=${event.target.id}]`)
     const outgoingContainer = document.getElementsByClassName("displayed")[0];
     // remove the existing container

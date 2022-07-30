@@ -80,6 +80,22 @@ video#portrait {
     margin-left: 2em;
     margin-right: 2em;
 }
+
+#projects-container {
+    flex-direction: column;
+}
+
+#project-listings {
+    width: 80vw;
+}
+.project {
+    width: 30vw;
+    
+}
+.project img {
+    width: 30vw;
+}
+
 p {
     font-size: 1.2em;
 }

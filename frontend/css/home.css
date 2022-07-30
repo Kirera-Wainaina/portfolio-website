@@ -94,7 +94,9 @@ video#portrait {
 }
 .project {
     width: 30vw;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .project > img {
     width: 30vw;
@@ -107,18 +109,18 @@ video#portrait {
     justify-content: flex-start;
     color: black;
     align-items: center;
+    width: 100%;
 }
 .content-title img {
     height: 2em;
 }
 .content p {
-    margin: 0.5em;
+    /* margin: 0.5em; */
     background-color: white;
     color: black;
+    padding: 0.5em;
 }
 
-.project-title {
-}
 
 p {
     font-size: 1.2em;

@@ -37,10 +37,11 @@ video#portrait {
 }
 
 #about-container, #projects-container {
-    opacity: 0.6;
-    background-color: black;
+    /*The below method changes the opacity of the background
+    only without affecting the project listings
+    */
+    background: rgba(0, 0, 0, 0.1);
     color: white;
-    /* height: 90vh; */
 }
 
 #about-container.displayed, 

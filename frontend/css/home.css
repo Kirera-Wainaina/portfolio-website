@@ -31,7 +31,6 @@ video#portrait {
     top: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -52,7 +51,7 @@ video#portrait {
 
 #welcome-container {
     color: black;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 #welcome-container h1 {
@@ -73,7 +72,8 @@ video#portrait {
 #about-container {
     flex-direction: column;
     padding-top: 5vh;
-    /* padding: 3em; */
+    width: 50vw;
+    margin-left: 25vw;
 }
 
 #about-container p {
@@ -81,11 +81,31 @@ video#portrait {
     margin-left: 2em;
     margin-right: 2em;
 }
+#contact-card {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+#contact-card h3 {
+    text-align: center;
+    margin: 1em;
+    margin-bottom: 0.5em;
+}
+#contact-card a {
+    /* border: 1px solid black; */
+    height: 5vh;
+    display: block;
+    margin-left: 30%;
+}
+#contact-card img {
+    height: 1em;
+}
 
 #projects-container {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 12vh;
+    height: 100vh;
 }
 
 #project-listings {
@@ -216,6 +236,12 @@ p {
     #welcome-container h1 {
         font-size: 5em;
     }
+    #about-container {
+        width: 100vw;
+        margin-left: 0%;
+        margin-top: 6vh;
+        height: auto;
+    }
     #about-text {
         grid-column: 1 / 6;
         margin: 0.5em;
@@ -240,5 +266,8 @@ p {
     }
     .links a {
         width: 30%;
+    }
+    #contact-card a {
+        margin-left: 10%;
     }
 }

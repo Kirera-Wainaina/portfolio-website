@@ -17,7 +17,7 @@ server.on("stream", (stream, headers) => {
     // Respond to incoming requests
 
     console.log(`${new Date()}, path: ${headers[":path"]}`)
-    console.log(headers);
+    // console.log(headers);
     const filePath = createFilePath(headers[":path"]);
     const mimetype = utils.findMIMETypeFromExtension(path.extname(filePath));
 
@@ -37,6 +37,12 @@ server.on("error", error => {
     handleStreamError(error);
 })
 
+process.on("uncaughtException", (error, origin) => {
+    console.log("This error was caught by the process!");
+    console.log(error);
+    console.log(origin);
+});
+
 function handleStreamError(error, stream) {
     console.log("This error was caught")
     if (!stream) {
@@ -54,7 +60,6 @@ function handleStreamError(error, stream) {
         console.log(error)
     }
 }
-
 
 function createFilePath(filePath) {
     // Match incoming request paths to files

@@ -73,5 +73,7 @@ contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", eve
     contents.forEach(content => content.classList.remove("clicked"));
 
     // next element to event target is content
-    event.target.nextElementSibling.classList.toggle("clicked");
+    // using current target because the inner elements also have the click event
+    // which is causing a problem with execution
+    event.currentTarget.nextElementSibling.classList.toggle("clicked");
 }))

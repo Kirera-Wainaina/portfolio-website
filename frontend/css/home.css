@@ -95,6 +95,7 @@ video#portrait {
     gap: 2em;
     overflow-x: scroll;
     margin-top: 3vh;
+    padding-bottom: 3vh;
 }
 .project {
     width: 50vw;

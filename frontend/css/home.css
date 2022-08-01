@@ -146,7 +146,7 @@ video#portrait {
     width: 15%;
     padding: 1em;
 }
-.links a:nth-child(2) img {
+.links .github {
     height: 1.5em;
 }
 

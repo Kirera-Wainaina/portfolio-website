@@ -125,6 +125,7 @@ video#portrait {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 10vw;
 }
 .project:first-child {
     /* To center the first project in the container */
@@ -264,6 +265,7 @@ p {
     }
     .project {
         width: 90vw;
+        margin-right: 2px;
     }
     .project:first-child {
         margin-left: 4.5vw;

@@ -135,6 +135,24 @@ video#portrait {
     color: black;
     padding: 0.5em;
 }
+.links {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: white;
+}
+.links a {
+    background-color: white;
+    width: 15%;
+    padding: 1em;
+}
+.links a:nth-child(2) img {
+    height: 1.5em;
+}
+
+.links img {
+    height: 1em;
+}
 
 p {
     font-size: 1.2em;
@@ -201,5 +219,8 @@ p {
     }
     .project:first-child {
         margin-left: 4.5vw;
+    }
+    .links a {
+        width: 30%;
     }
 }

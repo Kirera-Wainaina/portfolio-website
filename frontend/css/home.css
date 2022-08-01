@@ -91,13 +91,19 @@ video#portrait {
 #project-listings {
     width: 80vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 2em;
+    overflow-x: scroll;
 }
 .project {
-    width: 30vw;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.project:first-child {
+    /* To center the first project in the container */
+    margin-left: 15vw;
 }
 .project > img {
     width: inherit;

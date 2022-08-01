@@ -68,6 +68,10 @@ function changeContainer(event) {
 }
 
 const contentTitles = document.querySelectorAll(".content-title");
-contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", () => {
-    console.log("clicked")
+contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", event => {
+    const contents = document.querySelectorAll(".content");
+    contents.forEach(content => content.classList.remove("clicked"));
+
+    // next element to event target is content
+    event.target.nextElementSibling.classList.toggle("clicked");
 }))

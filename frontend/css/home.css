@@ -94,6 +94,7 @@ video#portrait {
     justify-content: flex-start;
     gap: 2em;
     overflow-x: scroll;
+    margin-top: 3vh;
 }
 .project {
     width: 50vw;
@@ -111,7 +112,7 @@ video#portrait {
 
 .content-title {
     background-color: white;
-    height: 2em;
+    height: 7vh;
     display: flex;
     justify-content: flex-start;
     color: black;
@@ -121,13 +122,18 @@ video#portrait {
 .content-title img {
     height: 2em;
 }
+.content {
+    display: none;
+}
+.content.clicked {
+    display: block;
+}
 .content p {
     /* margin: 0.5em; */
     background-color: white;
     color: black;
     padding: 0.5em;
 }
-
 
 p {
     font-size: 1.2em;

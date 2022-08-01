@@ -110,6 +110,12 @@ video#portrait {
 .project > img {
     width: inherit;
 }
+.project h3 {
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding: 1.2em;
+}
 
 .content-title {
     background-color: white;
@@ -158,10 +164,11 @@ video#portrait {
     display: flex;
     justify-content: flex-start;
     background-color: white;
+    padding-bottom: 5vh;
 }
 .tech-stack img {
     object-fit: contain;
-    width: 30%;
+    width: 33%;
     height: 3em;
 }
 

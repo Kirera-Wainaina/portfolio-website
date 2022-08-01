@@ -69,11 +69,17 @@ function changeContainer(event) {
 
 const contentTitles = document.querySelectorAll(".content-title");
 contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", event => {
-    const contents = document.querySelectorAll(".content");
-    contents.forEach(content => content.classList.remove("clicked"));
+    const nextElementSibling = event.currentTarget.nextElementSibling;
+    if (nextElementSibling.classList.contains("clicked")) {
+        // click twice to contract content
+        nextElementSibling.classList.toggle("clicked")
+    } else {
+        const contents = document.querySelectorAll(".content");
+        contents.forEach(content => content.classList.remove("clicked"));
 
-    // next element to event target is content
-    // using current target because the inner elements also have the click event
-    // which is causing a problem with execution
-    event.currentTarget.nextElementSibling.classList.toggle("clicked");
+        // next element to event target is content
+        // using current target because the inner elements also have the click event
+        // which is causing a problem with execution
+        event.currentTarget.nextElementSibling.classList.toggle("clicked");
+    }
 }))

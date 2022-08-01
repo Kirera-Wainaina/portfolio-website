@@ -13,9 +13,10 @@ h1, h2, h3, p {
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    overflow-x: hidden;
 }
 video {
-    width: 100vw;  
+    width: 100vw;
     grid-column: 1 / 13; 
 }
 video#landscape {
@@ -30,7 +31,7 @@ video#portrait {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 99vw;
     justify-content: center;
     align-items: center;
 }
@@ -51,7 +52,7 @@ video#portrait {
 
 #welcome-container {
     color: black;
-    height: 100vh;
+    height: 99%;
 }
 
 #welcome-container h1 {

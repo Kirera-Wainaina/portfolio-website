@@ -192,4 +192,7 @@ p {
     .project {
         width: 90vw;
     }
+    .project:first-child {
+        margin-left: 4.5vw;
+    }
 }

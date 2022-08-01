@@ -154,6 +154,17 @@ video#portrait {
     height: 1em;
 }
 
+.tech-stack {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+}
+.tech-stack img {
+    object-fit: contain;
+    width: 30%;
+    height: 3em;
+}
+
 p {
     font-size: 1.2em;
 }

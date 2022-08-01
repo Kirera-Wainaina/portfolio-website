@@ -66,3 +66,10 @@ function changeContainer(event) {
     // enter the outgoing container
     incomingContainer.classList.toggle("displayed")
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contentTitles = document.querySelectorAll(".content-title");
+    contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", () => {
+        console.log("clicked")
+    }))
+})

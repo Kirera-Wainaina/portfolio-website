@@ -85,7 +85,8 @@ video#portrait {
     background-color: white;
     color: black;
     width: 100%;
-    display: none;
+    padding-bottom: 5vh;
+    /* display: none; */
 }
 #contact-card h3 {
     text-align: center;
@@ -127,6 +128,9 @@ video#portrait {
 .project:first-child {
     /* To center the first project in the container */
     margin-left: 15vw;
+}
+.project:last-child {
+    margin-right: 15vw;
 }
 .project > img {
     width: inherit;
@@ -263,10 +267,18 @@ p {
     .project:first-child {
         margin-left: 4.5vw;
     }
+    .project:last-child {
+        margin-right: 4.5vw;
+    }
     .links a {
         width: 30%;
     }
     #contact-card a {
-        margin-left: 10%;
+        margin-left: 5%;
+        /* border: 1px solid red; */
+        height: 9vh;
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
     }
 }

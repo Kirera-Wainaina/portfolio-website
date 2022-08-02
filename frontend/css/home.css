@@ -13,7 +13,7 @@ h1, h2, h3, p {
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 video {
     width: 100vw;

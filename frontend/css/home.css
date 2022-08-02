@@ -138,10 +138,8 @@ video#portrait {
 .project:last-child {
     margin-right: 15vw;
 }
-/* .project > img, */
 picture img, picture source{
-    /* width: inherit; */
-    width: 30vw;
+    width: 50vw;
 }
 .project h3 {
     color: black;
@@ -277,6 +275,9 @@ p {
     }
     .project:last-child {
         margin-right: 4.5vw;
+    }
+    picture img, picture source{
+        width: 85vw;
     }
     .links a {
         width: 30%;

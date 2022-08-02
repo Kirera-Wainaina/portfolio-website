@@ -87,22 +87,21 @@ video#portrait {
     margin-right: 2em;
 }
 #contact-card {
-    background-color: white;
+    background-color: none;
     color: black;
     width: 100%;
     padding-bottom: 5vh;
-    /* display: none; */
 }
 #contact-card h3 {
     text-align: center;
     margin: 1em;
     margin-bottom: 0.5em;
+    color: white;
 }
 #contact-card a {
-    /* border: 1px solid black; */
     height: 5vh;
     display: block;
-    margin-left: 30%;
+    margin-left: 2em;
 }
 #contact-card img {
     height: 1em;
@@ -281,8 +280,6 @@ p {
         width: 30%;
     }
     #contact-card a {
-        margin-left: 5%;
-        /* border: 1px solid red; */
         height: 9vh;
         font-size: 1.2em;
         display: flex;

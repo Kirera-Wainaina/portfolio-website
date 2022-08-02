@@ -17,7 +17,11 @@ body {
 }
 video {
     width: 100vw;
-    grid-column: 1 / 13; 
+    /* grid-column: 1 / 13; */
+    display: absolute;
+    top: 0;
+    left: 0;
+    /* overflow: hidden; */
 }
 video#landscape {
     display: block;
@@ -119,6 +123,7 @@ video#portrait {
     overflow-x: scroll;
     margin-top: 3vh;
     padding-bottom: 3vh;
+    overflow-y: visible;
 }
 .project {
     width: 50vw;
@@ -246,19 +251,18 @@ p {
     #about-container {
         width: 99vw;
         margin-left: 0%;
-    }
-    #about-text {
-        grid-column: 1 / 6;
-        margin: 0.5em;
-        margin-top: 0;
+        overflow: visible;
+        /* border: 1px solid red; */
+        height: 85vh;
+        overflow-y: scroll;
+        justify-content: flex-start;
     }
     #menu {
-        /* border: 1px solid orange; */
         width: 90vw;
         left: 5vw;
     }
     #project-listings {
-        width: 99vw;
+        width: 100vw;
         justify-content: flex-start;
         gap: .2em;
         overflow-x: scroll;

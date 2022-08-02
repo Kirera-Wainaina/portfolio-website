@@ -57,7 +57,11 @@
       <div id="project-listings">
 
         <div class="project" id="glass-spades-listing">
-          <img src="/glass-thumbnail.webp" alt="glass-spades-wall" />
+          <picture>
+            <source srcset="/glass-spades-portrait.webp" media="(orientation: portrait)" >
+            <source srcset="/glass-thumbnail.webp" media="(orientation: landscape)" >
+            <img src="/glass-thumbnail.webp" alt="glass-spades-wall" />
+          </picture>
           <button class="content-title">
             <img src="drop-down.svg" alt="down arrow"/>
             <p id="project-title">Glass Spades</p>
@@ -99,7 +103,12 @@
         </div>
 
         <div class="project" id="portfolio-website-listing">
-          <img src="portfolio-website-wallpaper.webp" alt="portfolio-website" />
+          <picture>
+            <source srcset="portfolio-portrait.webp" media="(orientation: portrait)" >
+            <source srcset="/portfolio-website-wallpaper.webp" media="(orientation: landscape)" >
+            <img src="portfolio-website-wallpaper.webp" alt="portfolio-website" />
+          </picture>
+
           <button class="content-title">
             <img src="drop-down.svg" alt="down arrow"/>
             <p id="project-title">Portfolio Website</p>
@@ -139,7 +148,11 @@
         </div>
 
         <div class="project" id="mea-listing">
-          <img src="accounting.webp" alt="mea thumbnail" />
+          <picture>
+            <source srcset="accounting-portrait.webp" media="(orientation: portrait)" >
+            <source srcset="accounting.webp" media="(orientation: portrait)" >
+            <img src="accounting.webp" alt="mea thumbnail" />
+          </picture>
           <button class="content-title">
             <img src="drop-down.svg" alt="down arrow"/>
             <p id="project-title">MEA Tax Project</p>

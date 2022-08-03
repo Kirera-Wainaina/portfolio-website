@@ -36,7 +36,8 @@ video#portrait {
     display: none;
 }
 
-#about-container, #projects-container, #welcome-container {
+#about-container, #projects-container, #welcome-container,
+.content {
     display: none;
     position: absolute;
     top: 0;
@@ -86,7 +87,7 @@ video#portrait {
     flex-direction: column;
     width: 50vw;
     margin-left: 25vw;
-    top: 10vh;
+    top: 11vh;
 }
 
 #about-container p,
@@ -132,7 +133,6 @@ video#portrait {
     overflow-x: scroll;
     margin-top: 3vh;
     padding-bottom: 3vh;
-    overflow-y: visible;
 }
 .project {
     width: 50vw;
@@ -176,9 +176,16 @@ picture img, picture source{
 }
 .content {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
+    overflow-y: scroll;
+    height: 88vh;
+    justify-content: flex-start;
+}
+.content h3 {
+    color: black;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding-top: 2em;
 }
 .links {
     display: flex;
@@ -204,8 +211,11 @@ picture img, picture source{
     justify-content: flex-start;
     background-color: white;
     /* padding-bottom: 5vh; */
-    height: 10vh;
+    /* height: 20vh; */
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     align-items: center;
+    width: 100%;
 }
 .tech-stack img {
     object-fit: contain;

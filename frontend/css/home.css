@@ -46,7 +46,7 @@ video#portrait {
     align-items: center;
 }
 
-#about-container, #projects-container {
+#about-container, #projects-container, .content {
     /*The below method changes the opacity of the background
     only without affecting the project listings
     */
@@ -56,7 +56,8 @@ video#portrait {
 
 #about-container.displayed, 
 #projects-container.displayed,
-#welcome-container.displayed {
+#welcome-container.displayed,
+.content.displayed {
     display: flex;
 }
 
@@ -80,7 +81,8 @@ video#portrait {
     display: block;
 }
 
-#about-container {
+#about-container,
+.content {
     flex-direction: column;
     width: 50vw;
     margin-left: 25vw;
@@ -172,15 +174,10 @@ picture img, picture source{
 }
 .content {
     display: none;
-}
-.content.clicked {
-    display: block;
-}
-.content p {
-    /* margin: 0.5em; */
-    background-color: white;
-    color: black;
-    padding: 0.5em;
+    flex-direction: column;
+    position: absolute;
+    top: 11vh;
+    left: 0;
 }
 .links {
     display: flex;

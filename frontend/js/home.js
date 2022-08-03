@@ -87,8 +87,11 @@ const contentTitles = document.querySelectorAll(".content-title");
 // }))
 
 contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", event => {
-    console.log("clicked");
     disableProjectsContainer();
+    const projectName = event.target.dataset.project;
+    const content = document.querySelector(`.content[data-from=${projectName}]`);
+    console.log(content);
+    content.classList.toggle("displayed");
 }))
 
 function disableProjectsContainer() {

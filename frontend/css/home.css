@@ -7,13 +7,19 @@
     margin: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, button {
     font-family: 'Roboto', sans-serif;
 }
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     overflow: hidden;
+}
+p {
+    font-size: 1.2em;
+}
+button {
+    font-size: 1em;
 }
 video {
     width: 100vw;
@@ -207,9 +213,6 @@ picture img, picture source{
     height: 3em;
 }
 
-p {
-    font-size: 1.2em;
-}
 #menu {
     position: absolute;
     top: 0px;

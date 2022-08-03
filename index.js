@@ -1,10 +1,12 @@
 const http2 = require("http2");
+const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
 const utils = require("./utils/MIMETypes")
 
 const port = 443;
+const httpPort = 80;
 
 const server = http2.createSecureServer({
     key: fs.readFileSync("localhost-privkey.pem"),
@@ -36,6 +38,13 @@ server.on("stream", (stream, headers) => {
 server.on("error", error => {
     handleStreamError(error);
 })
+
+const httpServer = http.createServer((request, response) => {
+    response
+        .writeHead(301, { "Location": `https://${request.headers.host}${request.url}`})
+        .end()
+});
+httpServer.listen(httpPort, console.log("Received a http request"));
 
 process.on("uncaughtException", (error, origin) => {
     console.log("This error was caught by the process!");

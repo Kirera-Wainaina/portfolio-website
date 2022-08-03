@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     if (isLandscape()) {
-        landscapeVideo.src = "/smoke-vid-landscape.mp4"
+        landscapeVideo.src = "https://storage.googleapis.com/side-projects/portfolio-website/smoke-vid-landscape.mp4"
     } else {
-        portraitVideo.src = "/smoke-vid-portrait.mp4"
+        portraitVideo.src = "/https://storage.googleapis.com/side-projects/portfolio-website/smoke-vid-portrait.mp4"
     }
 })
 

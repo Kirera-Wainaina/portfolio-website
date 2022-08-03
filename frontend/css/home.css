@@ -89,7 +89,8 @@ video#portrait {
     top: 10vh;
 }
 
-#about-container p {
+#about-container p,
+.content p {
     margin: 1em;
     margin-left: 2em;
     margin-right: 2em;
@@ -100,7 +101,8 @@ video#portrait {
     width: 100%;
     padding-bottom: 5vh;
 }
-#contact-card h3 {
+#contact-card h3,
+.content h3 {
     text-align: center;
     margin: 1em;
     margin-bottom: 0.5em;
@@ -176,7 +178,6 @@ picture img, picture source{
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 11vh;
     left: 0;
 }
 .links {
@@ -202,7 +203,9 @@ picture img, picture source{
     display: flex;
     justify-content: flex-start;
     background-color: white;
-    padding-bottom: 5vh;
+    /* padding-bottom: 5vh; */
+    height: 10vh;
+    align-items: center;
 }
 .tech-stack img {
     object-fit: contain;
@@ -251,11 +254,10 @@ picture img, picture source{
     #welcome-container h1 {
         font-size: 5em;
     }
-    #about-container {
+    #about-container,
+    .content {
         width: 99vw;
         margin-left: 0%;
-        overflow: visible;
-        /* border: 1px solid red; */
         height: 85vh;
         overflow-y: scroll;
         justify-content: flex-start;

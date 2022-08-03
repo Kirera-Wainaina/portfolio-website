@@ -70,25 +70,9 @@ function changeContainer(event) {
 }
 
 const contentTitles = document.querySelectorAll(".content-title");
-// contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", event => {
-    // const nextElementSibling = event.currentTarget.nextElementSibling;
-    // if (nextElementSibling.classList.contains("clicked")) {
-        // // click twice to contract content
-        // nextElementSibling.classList.toggle("clicked")
-    // } else {
-        // const contents = document.querySelectorAll(".content");
-        // contents.forEach(content => content.classList.remove("clicked"));
-
-        // // next element to event target is content
-        // // using current target because the inner elements also have the click event
-        // // which is causing a problem with execution
-        // event.currentTarget.nextElementSibling.classList.toggle("clicked");
-    // }
-// }))
-
 contentTitles.forEach(contentTitle => contentTitle.addEventListener("click", event => {
     disableProjectsContainer();
-    const projectName = event.target.dataset.project;
+    const projectName = event.currentTarget.dataset.project;
     const content = document.querySelector(`.content[data-from=${projectName}]`);
     console.log(content);
     content.classList.toggle("displayed");

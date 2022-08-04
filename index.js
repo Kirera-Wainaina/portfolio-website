@@ -1,10 +1,12 @@
 const http2 = require("http2");
+const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
 const utils = require("./utils/MIMETypes")
 
 const port = 443;
+const httpPort = 80;
 
 const server = http2.createSecureServer({
     key: fs.readFileSync("localhost-privkey.pem"),
@@ -17,7 +19,7 @@ server.on("stream", (stream, headers) => {
     // Respond to incoming requests
 
     console.log(`${new Date()}, path: ${headers[":path"]}`)
-    console.log(headers);
+    // console.log(headers);
     const filePath = createFilePath(headers[":path"]);
     const mimetype = utils.findMIMETypeFromExtension(path.extname(filePath));
 
@@ -37,7 +39,21 @@ server.on("error", error => {
     handleStreamError(error);
 })
 
+const httpServer = http.createServer((request, response) => {
+    response
+        .writeHead(301, { "Location": `https://${request.headers.host}${request.url}`})
+        .end()
+});
+httpServer.listen(httpPort, console.log("Received a http request"));
+
+process.on("uncaughtException", (error, origin) => {
+    console.log("This error was caught by the process!");
+    console.log(error);
+    console.log(origin);
+});
+
 function handleStreamError(error, stream) {
+    console.log("This error was caught")
     if (!stream) {
         console.log(error.code);
         return ;
@@ -53,7 +69,6 @@ function handleStreamError(error, stream) {
         console.log(error)
     }
 }
-
 
 function createFilePath(filePath) {
     // Match incoming request paths to files

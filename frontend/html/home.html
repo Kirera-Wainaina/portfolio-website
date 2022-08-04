@@ -5,40 +5,232 @@
     <meta charset="utf-8">
     <meta name="author" content="Kirera-Wainaina">
     <meta name="description"
-	  content="This is the home page to the Kirera-Wainaina website">
+	  content="This is the home page to the Kirera-Wainaina Portfolio Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/frontend/images/favicon.png">    
-    <link rel="apple-touch-icon" href="/frontend/images/favicon.png">
+    <link rel="shortcut icon" 
+      href="https://storage.googleapis.com/side-projects/portfolio-website/favicon.png">    
+
+    <link rel="apple-touch-icon" 
+      href="https://storage.googleapis.com/side-projects/portfolio-website/favicon.png">
+    <meta name="thumbnail" 
+      content="https://storage.googleapis.com/side-projects/portfolio-website/favicon.png">
+    <meta name="og:title" content="The Kirera Wainaina Portfolio Website">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="https://kirera.africa">
+    <meta name="og:image" 
+      content="https://storage.googleapis.com/side-projects/portfolio-website/favicon.png">
+    <meta name="og:image:alt" content="Kirera Wainaina icon">
+    <meta name="og:site_name" content="Kirera.Africa">
+    <meta name="og:description"
+      content="Get insight into the work I have created with access to the links and git code.">
     <link rel="stylesheet" href="/frontend/css/home.css">
-    <script async="async" src="/frontend/js/home.js"></script>
-    <!-- <script type="module" async="async" src="/frontend/js/general.js"></script> -->
     <title> Kirera Wainaina | Homepage</title>
   </head>
 
   <body>
-    <video id="landscape" src="/smoke-vid-landscape.mp4" autoplay muted></video>
-    <video id="portrait" src="/smoke-vid-portrait.mp4" autoplay muted></video>
-    <div id="welcome-container">
+    <video id="landscape" autoplay muted></video>
+    <video id="portrait" autoplay muted></video>
+    <div id="menu">
+      <a href="" id="home" class="clicked">Home</a>
+      <a href="" id="projects">Projects</a>
+      <a href="" id="about">About</a>
+    </div>
+    <div data-menu-id="home" id="welcome-container" class="displayed">
       <h1 class="show-element">Welcome</h1>
       <p>I am Kirera Wainaina</p>
     </div>
-    <div id="my-pic-container"><img src="/me.webp" alt="picture of me" id="pic-of-me"/></div>
-    <h2>Full Stack Developer</h2>
-    <h3>About Me</h3>
-    <p id="about-text">My programming interest came about because of my craving for solving real
-       world problems. Since then it has been an obssession. My taste drives me to write 
-       code that is user-centric. I pay attention to the details while also keeping up
-       with the technologies that enhance user experience.</p>
-    <h3>My Projects</h3>
-    <div class="project-card">
-      <h3>Glass Spades</h3>
-      <img src="/Landscape-homepage-black.jpg" alt="Glass Spades Icon" />
-      <p>Glass Spades, a real estate agency, contracted me to create a website for them.
-        The goal was to have one that had a good performance score and quick loading
-        speed. Responsive web design was a key factor given most users access the internet
-        through their mobile phones.
+    <div data-menu-id="about" id="about-container">
+      <p>I have always been a curious soul. It was only a matter of time until I discovered
+        computers. Once I did, there was no looking back. It makes me happy when I start with
+        a blank canvas and grow it into this reflection of my thoughts, putting into the world
+        what started as a single pixel.
       </p>
+      <p>
+        I enjoy creating websites that help clients achieve their goals. Whether it's
+        making your users happy or satisfied. Your goal is my mission. Companies and individuals
+        alike have visions of what they would like their brands to portray. I help you bring it
+        to life. I use whatever tools suit the job and my skillset is diverse.
+      </p>
+      <p>I am looking forward to working with you on your next big project.</p>
+      <div id="contact-card">
+        <h3>Talk to me:</h3>
+        <a href="tel:+254746495209">
+          Mobile: +254 746 495209 <img src="https://storage.googleapis.com/side-projects/portfolio-website/arrow-outward.svg" alt="outward link" />
+        </a>
+        <a href="mailto:richardwainainak@gmail.com">
+          Email: richardwainainak@gmail.com <img src="https://storage.googleapis.com/side-projects/portfolio-website/arrow-outward.svg" alt="outward link" />
+        </a>
+        <a href="https://linkedin.com/in/kirera-wainaina">
+          LinkedIn <img src="https://storage.googleapis.com/side-projects/portfolio-website/arrow-outward.svg" alt="outward link" />
+        </a>
+      </div>
     </div>
+
+    <div data-menu-id="projects" id="projects-container">
+      <p>These are the projects I have created</p>
+      <div id="project-listings">
+
+        <div class="project" id="glass-spades-listing" >
+          <picture>
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/glass-spades-portrait.webp" 
+              media="(orientation: portrait)" >
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/glass-thumbnail.webp" media="(orientation: landscape)" >
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/glass-thumbnail.webp" alt="glass-spades-wall" />
+          </picture>
+          <button class="content-title" data-project="glass-spades">
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/drop-down.svg" alt="down arrow"/>
+            Glass Spades
+          </button>
+        </div>
+
+        <div class="project" id="portfolio-website-listing">
+          <picture>
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/portfolio-portrait.webp" 
+              media="(orientation: portrait)" >
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/portfolio-website-wallpaper.webp" 
+              media="(orientation: landscape)" >
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/portfolio-website-wallpaper.webp" 
+              alt="portfolio-website" />
+          </picture>
+
+          <button class="content-title" data-project="portfolio-website">
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/drop-down.svg" alt="down arrow"/>
+            Portfolio Website
+          </button>
+        </div>
+
+        <div class="project" id="mea-listing">
+          <picture>
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/accounting-portrait.webp" 
+              media="(orientation: portrait)" >
+            <source srcset="https://storage.googleapis.com/side-projects/portfolio-website/accounting.webp" 
+              media="(orientation: portrait)" >
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/accounting.webp" 
+              alt="mea thumbnail" />
+          </picture>
+          <button class="content-title" data-project="mea-tax">
+            <img src="https://storage.googleapis.com/side-projects/portfolio-website/drop-down.svg" 
+              alt="down arrow"/>
+            MEA Tax Project
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content" data-from="glass-spades">
+      <div class="links">
+        <a href="https://glassspades.com" target="_blank">
+          Website <img src="https://storage.googleapis.com/side-projects/portfolio-website/arrow-outward.svg" />
+        </a>
+        <a href="https://github.com/Kirera-Wainaina/glass-spades" target="_blank">
+          <img src="https://storage.googleapis.com/side-projects/portfolio-website/github-small.png" class="github"/>
+        </a>
+      </div>
+      <p>Glass Spades Real Estate is a young real estate agency in Kenya. It is an
+        organization that understood the necessity for a modern website using modern
+        technologies. 
+        They wanted a website that would compete well and give the young 
+        company a fighting chance in a competitive market space under a tough economy.
+      </p>
+      <p>User experience was the main focus both for them and for me. We understood
+        that majority of our users are on mobile phone. We therefore created a
+        website that was both responsive and accessible to all our users. We
+        were going for a feel that was both clean and elegant in order to bring
+        out the best of the houses that they were marketing.
+      </p>
+      <p>The company gave me a blank canvas in terms of the tech stack. The only
+        condition was to create a backend that could scale to handle load both
+        in the present and in the future. I used Javascript in the frontend and
+        Node.js in the backend. The database management system is MongoDB which
+        could handle the flexibility they needed in data storage.
+      </p>
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/JavaScript-logo.png" 
+          alt="Javascript Logo"/>
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/nodejs-logo.svg" 
+          alt="Node.js Logo"/>
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/mongodb-logo.png" alt="MongoDB Logo"/>
+      </div>
+    </div>
+
+    <div class="content" data-from="portfolio-website">
+      <div class="links">
+        <a href="/" target="_blank">
+          Website <img src="https://storage.googleapis.com/side-projects/portfolio-website/arrow-outward.svg" />
+        </a>
+        <a href="https://github.com/Kirera-Wainaina/portfolio-website" target="_blank">
+          <img src="https://storage.googleapis.com/side-projects/portfolio-website/github-small.png" class="github"/>
+        </a>
+      </div>
+
+      <p>
+      Every programmer needs a website and we all try to make them a representation
+      of what we like aesthetically. It also represents your programming style
+      and skill. The portfolio website, the one you are using at the moment,
+      is minimalistic. I believe in communicating what I want without making noise.
+      That is the guiding theme of this website. I hope you enjoy it.
+      </p>
+      <p>The website is created as a single page app and you'll notice as you click
+        about on the other links. While I could have used frameworks, the essence is
+        to display a clear understanding of the fundamentals on which frameworks are
+        built on top of.
+      </p>
+      <p>
+        The website is built using Javascript, Node.js on the backend. There is a lot
+        of HTML and CSS to get the animations working.
+      </p>
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/JavaScript-logo.png" alt="Javascript Logo"/>
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/nodejs-logo.svg" alt="Node.js Logo"/>
+      </div>
+    </div>
+
+    <div class="content" data-from="mea-tax">
+      <div class="links">
+        <a href="https://github.com/Kirera-Wainaina/mea-tax" target="_blank">
+          <img src="https://storage.googleapis.com/side-projects/portfolio-website/github-small.png" class="github"/>
+        </a>
+      </div>
+
+      <p>
+        The MEA Tax Project is a project that I undertook for the US mission employees.
+        According to the US laws, employees file their own taxes and pay their own
+        government while in Kenya it is the opposite. Employers withhold their employees
+        taxes and file them with the Kenya Revenue Authority. This puts a lot of
+        these employees under undue stress as many are not familiar with the relevant
+        tax laws to start doing so on their own.
+      </p>
+      <p>
+        The employees came together and formed an association that assists them to
+        create the necessary tax file, P9 and provides guidance on how to go about it.
+        The number of employees in the association is over 400. The due date for the
+        P9 forms is on June 30. For two years, the accountants were collecting the 
+        necessary financial information and creating the P9 forms for each employee.
+        It was a strenous task.
+      </p>
+      <p>
+        The program compresses what was 6 months of labor into 5 minutes. All of which
+        is error free. It has allowed the accountants to focus on other tasks and
+        the employees to file their taxes on time. All the program needs is the 
+        employee information such as their name, tax pin, and salary information. The
+        program them computes the taxes due per employee. It then creates the P9 form
+        which is an excel form converted into a PDF and then shared with the employees.
+      </p>
+      <p>
+        The tech stack used in the project is Python which has a very good excel package,
+        Openpyxl. The file conversion is done through Linux to automate the file conversion.
+      </p>
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <img src="https://storage.googleapis.com/side-projects/portfolio-website/python-logo.png" alt="Python Logo"/>
+      </div>
+
+    </div>
+
   </body>
+  <script src="/frontend/js/home.js"></script>
   
 </html>

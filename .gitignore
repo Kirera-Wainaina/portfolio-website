@@ -5,6 +5,8 @@
 *.jpeg
 *.jpg
 *.webp
+*.png
+*.svg
 
 #localhost certificates
 *.pem

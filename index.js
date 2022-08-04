@@ -5,12 +5,13 @@ const path = require("path");
 
 const utils = require("./utils/MIMETypes")
 
-const port = 443;
+const port = process.env.PORT || 443;
 const httpPort = 80;
 
 const server = http2.createSecureServer({
     key: fs.readFileSync("localhost-privkey.pem"),
-    cert: fs.readFileSync("localhost-cert.pem")
+    cert: fs.readFileSync("localhost-cert.pem"),
+    allowHTTP1: true
 })
 
 server.listen(port, console.log(`Listening on port ${port}`))

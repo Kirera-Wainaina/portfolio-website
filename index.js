@@ -2,17 +2,37 @@ const http2 = require("http2");
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const dotenv = require("dotenv")
 
 const utils = require("./utils/MIMETypes")
 
 const port = process.env.PORT || 443;
 const httpPort = 80;
+dotenv.config();
 
-const server = http2.createSecureServer({
+
+const productionOptions = {
+    key:  fs.readFileSync(`${process.env.CERTPATH}/privkey.pem`, "utf8"),
+    cert: fs.readFileSync(`${process.env.CERTPATH}/fullchain.pem`, "utf8"),
+    ca: fs.readFileSync(`${process.env.CERTPATH}/chain.pem`, "utf8"),
+    allowHTTP1: true    
+}
+
+const devOptions = {
     key: fs.readFileSync("localhost-privkey.pem"),
     cert: fs.readFileSync("localhost-cert.pem"),
     allowHTTP1: true
-})
+}
+
+function getOptions(){
+    if (process.env.ENVIROMENT == "dev") {
+        return devOptions;
+    } else {
+        return productionOptions;
+    }    
+}
+
+const server = http2.createSecureServer(getOptions())
 
 server.listen(port, console.log(`Listening on port ${port}`))
 

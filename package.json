@@ -6,5 +6,8 @@
   "repository": "https://github.com/Kirera-Wainaina/portfolio-website",
   "author": "Kirera Wainaina",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
 }

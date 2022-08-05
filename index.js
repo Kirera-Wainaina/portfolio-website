@@ -5,30 +5,25 @@ const path = require("path");
 const dotenv = require("dotenv")
 
 const utils = require("./utils/MIMETypes")
-
+dotenv.config()
 const port = process.env.PORT || 443;
 const httpPort = 80;
-dotenv.config();
 
-
-const productionOptions = {
-    key:  fs.readFileSync(`${process.env.CERTPATH}/privkey.pem`, "utf8"),
-    cert: fs.readFileSync(`${process.env.CERTPATH}/fullchain.pem`, "utf8"),
-    ca: fs.readFileSync(`${process.env.CERTPATH}/chain.pem`, "utf8"),
-    allowHTTP1: true    
-}
-
-const devOptions = {
-    key: fs.readFileSync("localhost-privkey.pem"),
-    cert: fs.readFileSync("localhost-cert.pem"),
-    allowHTTP1: true
-}
 
 function getOptions(){
-    if (process.env.ENVIROMENT == "dev") {
-        return devOptions;
+    if (process.env.ENVIRONMENT == "dev") {
+        return {
+            key: fs.readFileSync("localhost-privkey.pem"),
+            cert: fs.readFileSync("localhost-cert.pem"),
+            allowHTTP1: true
+        }
     } else {
-        return productionOptions;
+        return {
+            key:  fs.readFileSync(`${process.env.CERTPATH}/privkey.pem`, "utf8"),
+            cert: fs.readFileSync(`${process.env.CERTPATH}/fullchain.pem`, "utf8"),
+            ca: fs.readFileSync(`${process.env.CERTPATH}/chain.pem`, "utf8"),
+            allowHTTP1: true    
+        }
     }    
 }
 

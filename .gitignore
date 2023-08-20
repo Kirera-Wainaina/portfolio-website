@@ -1,13 +1,3 @@
-# ignore the mp4 video files
-*.mp4
-
-# ignore image files
-*.jpeg
-*.jpg
-*.webp
-*.png
-*.svg
-
 #localhost certificates
 *.pem
 
@@ -16,3 +6,6 @@
 
 #node_modules
 node_modules/
+
+# .next - only used in dev mode
+.next/

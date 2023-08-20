@@ -1,4 +1,4 @@
-# Kirera.Africa
+# [Kirera.Africa](https://kirera.africa)
 My portfolio website is/will always be a work in progress. Sometimes I want to experiment with new
 technologies and other times I want it to reflect who I have become.
 
@@ -20,7 +20,7 @@ My Work experience, personal projects and open source contributions are of the s
 - name: string
 - startDate: date
 - endDate: date | 'ongoing'
-- techStack: Techstack[]
+- techStack: Techstack[ ]
 - statement: string
 
 **TechStack**

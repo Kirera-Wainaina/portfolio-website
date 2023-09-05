@@ -21,6 +21,11 @@ describe("Form elements are visible", () => {
     const { getByLabelText } = render(<Page />);
     expect(getByLabelText("Password:")).toBeVisible();
   })
+
+  test("Displays submit button", () => {
+    const { getByText } = render(<Page />);
+    expect(getByText("Submit")).toBeVisible()
+  })
   
 })
 

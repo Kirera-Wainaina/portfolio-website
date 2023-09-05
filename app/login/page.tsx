@@ -3,7 +3,7 @@ import * as React from "react";
 export default function Page() {
   return (
     <div className="flex flex-row justify-center items-center h-screen font-sans">
-      <form className="w-1/3 h-1/2 shadow-lg flex flex-col">
+      <form className="w-11/12 md:w-1/3 h-1/2 shadow-lg flex flex-col">
         <h1 className="self-center font-serif text-2xl">Login</h1>
 
         <label className="m-10 mb-0">
